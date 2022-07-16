@@ -59,11 +59,10 @@ export const Meals = () => {
         <div className="bg-white grid gap-5 grid-cols-1 md:grid-cols-3 w-full">
           {filtered.map((m) => {
             return (
-              <div>
+              <div key={m.idMeal}>
                 <div
                   className="cursor-pointer w-full h-36 flex items-center justify-center rounded-lg overflow-hidden p-5 text-center"
                   onClick={() => handleGoToMealsDetail(m.idMeal)}
-                  key={m.idMeal}
                   style={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${m.strMealThumb})`,
                     backgroundSize: "cover",

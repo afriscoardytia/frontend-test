@@ -22,7 +22,7 @@ export const MealsDetail = () => {
   }, [id]);
 
   return (
-    <div className="text-justify space-y-4 md:space-y-9">
+    <div className="text-justify ">
       {loading ? (
         <div className="flex items-center justify-center">
           <Loading />
@@ -32,7 +32,7 @@ export const MealsDetail = () => {
           let vid = meal.strYoutube;
           let video = vid.replace("watch?v=", "embed/");
           return (
-            <>
+            <div className="space-y-4 md:space-y-9" key={meal.idMeal}>
               <h1 className="text-xl md:text-3xl font-black">{meal.strMeal}</h1>
               <div>
                 <p className="text-red-500">{meal.strArea} Culinary</p>
@@ -200,7 +200,7 @@ export const MealsDetail = () => {
                   ></iframe>
                 </div>
               </div>
-            </>
+            </div>
           );
         })
       )}

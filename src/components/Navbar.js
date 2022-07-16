@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="flex items-center justify-center bg-white border-b border-gray-200 py-4 sticky top-0 z-10">
       <div className="w-11/12 flex">
